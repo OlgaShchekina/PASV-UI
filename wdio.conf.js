@@ -1,3 +1,4 @@
+const hookBefore = require('./hookBefore');
 exports.config = {
     //
     // ====================
@@ -72,7 +73,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'silent',
+    logLevel: 'warn',
     //
     // Set specific log levels per logger
     // loggers:
@@ -168,10 +169,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    before: function (capabilities, specs) {
-        require('@babel/register');
-        expect = require('chai').expect;
-    },
+    before: hookBefore,
+    // before: function (capabilities, specs) {
+    // },
     // before: function (capabilities, specs) {
     // },
     /**
@@ -260,4 +260,4 @@ exports.config = {
     */
     //onReload: function(oldSessionId, newSessionId) {
     //}
-}
+};
