@@ -23,6 +23,7 @@ node_modules/
 
 8 Type the following command in the terminal to install WebDriverIO : 
 ```
+npm init -y
 npm i --save-dev @wdio/cli
 ``` 
 9 Type the following command in the terminal to generate a configuration file to store WebdriverIO settings: 
