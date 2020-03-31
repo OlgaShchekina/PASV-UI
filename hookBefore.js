@@ -1,4 +1,5 @@
 const axios = require('axios');
+//const { admin} = require('./modules/user/_data/user.data');
 
 module.exports = async function(capabilities, specs) {
   const response = await axios({

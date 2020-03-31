@@ -6,6 +6,7 @@ import { student } from '../../user/_data/user.data';
 import { pageTestData } from '../_data/cardsMainAndCompact.data';
 import { groupNameLink } from '../../_data/newCard.data';
 
+
 describe('CARDS MAIN VIEW AND COMPACT VIEW', () => {
   before('login as a student', () => {
     LoginPage.login(student);
